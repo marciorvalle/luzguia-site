@@ -40,7 +40,7 @@ body { font-family: 'Open Sans', sans-serif; color: var(--dark); line-height: 1.
 
 /* HERO */
 .hero {
-    background: linear-gradient(135deg, rgba(22,160,133,0.9), rgba(83,215,145,0.8)), url('img/hero.jpg') center/cover;
+    background: linear-gradient(135deg, rgba(22,160,133,0.85), rgba(83,215,145,0.75)), url('img/logo.png') center no-repeat; background-size: 300px;
     color: var(--white);
     text-align: center;
     padding: 100px 20px;
