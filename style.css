@@ -41,9 +41,8 @@ body { font-family: 'Open Sans', sans-serif; color: var(--dark); line-height: 1.
 /* HERO */
 .hero {
     position: relative;
-    background-color: #e8f5e9;
-    background: #e8f5e9 url('img/logo-hero.png') center no-repeat; background-size: 320px;
-    color: var(--white);
+    background: linear-gradient(135deg, #e8f5e9, #b2dfdb);
+    color: var(--primary-dark);
     text-align: center;
     padding: 100px 20px;
     min-height: 500px;
@@ -55,7 +54,7 @@ body { font-family: 'Open Sans', sans-serif; color: var(--dark); line-height: 1.
     font-size: 2.8em;
     margin-bottom: 15px;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    color: var(--primary-dark);
 }
 .hero p {
     font-size: 1.2em;
