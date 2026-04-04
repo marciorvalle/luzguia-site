@@ -4,48 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ILG - Instituto Luz Guia (TEA)</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; }
-        nav { background: #2c5530; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; }
-        nav .logo { color: #fff; font-size: 1.5em; font-weight: bold; }
-        nav ul { list-style: none; display: flex; gap: 30px; }
-        nav ul li a { color: #fff; text-decoration: none; font-weight: 500; }
-        nav ul li a:hover { color: #a8d5ba; }
-        .hero { background: linear-gradient(135deg, #2c5530, #4a8c5c); color: #fff; text-align: center; padding: 80px 20px; }
-        .hero h1 { font-size: 2.5em; margin-bottom: 15px; }
-        .hero p { font-size: 1.2em; max-width: 700px; margin: 0 auto; }
-        .section { padding: 60px 40px; max-width: 1100px; margin: 0 auto; }
-        .section h2 { color: #2c5530; font-size: 2em; margin-bottom: 20px; text-align: center; }
-        .section p { margin-bottom: 15px; text-align: justify; }
-        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 30px; }
-        .card { background: #f8fdf8; border: 1px solid #d4e8d6; border-radius: 12px; padding: 30px; }
-        .card h3 { color: #2c5530; margin-bottom: 10px; }
-        .card p { font-size: 0.95em; }
-        .steps { counter-reset: step; }
-        .step { background: #f8fdf8; border-left: 4px solid #2c5530; padding: 25px; margin-bottom: 20px; border-radius: 0 12px 12px 0; }
-        .step h3 { color: #2c5530; margin-bottom: 8px; }
-        .quem-box { background: linear-gradient(135deg, #f8fdf8, #e8f5e9); border-radius: 16px; padding: 40px; margin-bottom: 30px; }
-        .quem-box h3 { color: #2c5530; font-size: 1.4em; margin-bottom: 15px; }
-        .formacoes { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 15px; }
-        .formacao { background: #fff; padding: 15px; border-radius: 8px; border: 1px solid #d4e8d6; }
-        .formacao strong { color: #2c5530; }
-        .whatsapp-btn { display: inline-block; background: #25D366; color: #fff; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-size: 1.2em; font-weight: bold; margin: 20px 0; }
-        .whatsapp-btn:hover { background: #128C7E; }
-        .contact-info { text-align: center; padding: 40px; }
-        .contact-info p { margin-bottom: 10px; }
-        .quote { font-style: italic; color: #666; text-align: center; padding: 30px; font-size: 1.1em; border-left: 4px solid #2c5530; margin: 30px auto; max-width: 700px; }
-        footer { background: #2c5530; color: #fff; text-align: center; padding: 20px; }
-        @media (max-width: 768px) {
-            nav { flex-direction: column; gap: 15px; }
-            nav ul { flex-wrap: wrap; justify-content: center; }
-            .hero h1 { font-size: 1.8em; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/logo.png" type="image/png">
 </head>
 <body>
-    <nav>
-        <div class="logo">🌿 ILG</div>
+    <nav class="navbar">
+        <div class="logo"><img src="img/logo.png" alt="Instituto Luz Guia"></div>
         <ul>
             <li><a href="/">HOME</a></li>
             <li><a href="/servicos.html">SERVIÇOS</a></li>
@@ -54,34 +18,44 @@
         </ul>
     </nav>
 
-    <div class="hero">
+    <section class="hero">
         <h1>Instituto Luz Guia</h1>
-        <p>Dedicado ao desenvolvimento infantil, com foco em crianças atípicas. Psicomotricidade + Recursos Educacionais Integrados.</p>
-    </div>
+        <p>Prestação de Serviços Institucionais no Acesso Digital<br>
+        Desenvolvimento Infantil com foco em crianças atípicas</p>
+    </section>
 
     <div class="section">
         <h2>Prestação de Serviços Institucionais</h2>
-        <p>O Instituto Luz Guia atua na prestação de serviços de apoio e infraestrutura para instituições, projetos e organizações voltadas ao desenvolvimento, inclusão e atendimento de crianças e pessoas com deficiência (PCD).</p>
+        <p>O Instituto Luz Guia também atua na prestação de serviços de apoio e infraestrutura para instituições, projetos e organizações voltadas ao desenvolvimento, inclusão e atendimento de crianças e pessoas com deficiência (PCD).</p>
         <p>Esses serviços são realizados de forma institucional, como pessoa jurídica (PJ), colaborando com a organização, estruturação e suporte necessário para o bom funcionamento dos espaços e projetos educacionais e sociais.</p>
+    </div>
 
-        <div class="cards">
-            <div class="card">
-                <h3>🧠 Psicomotricidade</h3>
-                <p>Atividades lúdicas e educativas que estimulam o desenvolvimento global da criança entre 3 e 6 anos.</p>
-            </div>
-            <div class="card">
-                <h3>📚 Suporte Educacional</h3>
-                <p>Inspiração na ABA Naturalista com recursos multidisciplinares para aprendizado personalizado.</p>
-            </div>
-            <div class="card">
-                <h3>👨‍👩‍👧 Orientação Familiar</h3>
-                <p>Apoio, informação e direcionamento para pais e responsáveis sobre a fase da primeira infância.</p>
+    <div class="section section-alt">
+        <h2>Quem Somos?</h2>
+        <div class="img-section">
+            <img src="img/sobre.jpg" alt="Instituto Luz Guia">
+            <div class="text">
+                <p>O Instituto Luz Guia é um espaço dedicado ao desenvolvimento infantil, com foco em crianças atípicas.</p>
+                <p>Nosso trabalho tem como base a psicomotricidade, aliada a estratégias educacionais inspiradas em diferentes abordagens, utilizando recursos multidisciplinares que apoiam o aprendizado, o comportamento e as habilidades do dia a dia da criança.</p>
+                <p>Atuamos principalmente com crianças na fase mais importante do desenvolvimento, entre 3 e 6 anos de idade, período que vai do final do maternal até a fase pré-escolar.</p>
             </div>
         </div>
     </div>
 
+    <div class="section">
+        <h2>Por que a Psicomotricidade é tão importante?</h2>
+        <p>A psicomotricidade ajuda a criança a desenvolver a relação entre o corpo, o movimento e a forma de se expressar.</p>
+        <p>Por meio das experiências corporais, a criança aprende sobre si mesma, sobre o espaço ao seu redor e sobre o mundo em que vive.</p>
+        <p>Desde os primeiros anos de vida, esse trabalho é fundamental, pois contribui para o desenvolvimento global da criança, favorecendo o aprendizado, a autonomia e a confiança.</p>
+        <p>No Instituto Luz Guia, utilizamos atividades lúdicas e educativas, como jogos, brincadeiras e movimentos originais que estimulam o corpo e a mente.</p>
+    </div>
+
     <div class="quote">
         "Quanto mais longe uma criança com autismo caminha sem ajuda, mais difícil se torna alcançá-la."
+    </div>
+
+    <div class="section" style="text-align: center;">
+        <a href="https://wa.me/5519996374976" class="btn-whatsapp">📱 Fale pelo WhatsApp</a>
     </div>
 
     <footer>
