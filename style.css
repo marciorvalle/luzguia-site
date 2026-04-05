@@ -12,6 +12,9 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: 'Open Sans', sans-serif; color: var(--dark); line-height: 1.7; }
+ul { padding-left: 20px; }
+ul li { margin-bottom: 8px; }
+ul li:last-child { margin-bottom: 0; }
 
 /* NAV */
 .navbar {
@@ -21,33 +24,41 @@ body { font-family: 'Open Sans', sans-serif; color: var(--dark); line-height: 1.
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    border-bottom: 2px solid var(--primary);
 }
-.navbar .logo img { height: 50px; }
+.navbar .logo img { height: 55px; }
 .navbar ul { list-style: none; display: flex; gap: 30px; }
 .navbar ul li a {
     color: var(--secondary);
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9em;
-    text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.3s;
 }
 .navbar ul li a:hover { color: var(--primary); }
 
-/* HEROS */
+/* HERO */
 .hero {
+    position: relative;
     background: linear-gradient(135deg, #e8f5e9, #b2dfdb);
+    color: var(--primary-dark);
     text-align: center;
-    padding: 70px 20px 90px;
+    padding: 80px 20px;
+}
+.hero h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.1em;
+    color: var(--secondary);
 }
 .hero-logo {
-    width: 380px;
-    max-width: 85%;
-    margin-bottom: 40px;
+    width: 350px;
+    max-width: 80%;
+    margin-bottom: 20px;
     filter: drop-shadow(0 4px 15px rgba(0,0,0,0.1));
 }
 
@@ -68,7 +79,7 @@ body { font-family: 'Open Sans', sans-serif; color: var(--dark); line-height: 1.
 
 /* SECTIONS */
 .section {
-    padding: 80px 30px;
+    padding: 80px 40px;
     background: var(--white);
 }
 .section-alt {
@@ -76,24 +87,17 @@ body { font-family: 'Open Sans', sans-serif; color: var(--dark); line-height: 1.
 }
 .section h2 {
     color: var(--primary);
-    font-size: 1.9em;
-    margin-bottom: 40px;
+    font-size: 2em;
+    margin-bottom: 30px;
     font-weight: 700;
     text-align: center;
-    padding-bottom: 12px;
-    border-bottom: 3px solid var(--primary);
-    display: inline-block;
-    width: 100%;
-    max-width: 1100px;
-    box-sizing: border-box;
 }
 
-/* IMAGE + TEXT SECTIONS */
+/* IMAGE + TEXT */
 .img-section {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 60px;
+    gap: 50px;
     max-width: 1100px;
     margin: 0 auto;
 }
@@ -103,7 +107,7 @@ body { font-family: 'Open Sans', sans-serif; color: var(--dark); line-height: 1.
     height: 280px;
     object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 .img-section img[alt="Logo Instituto Luz Guia"] {
     width: 260px;
@@ -113,34 +117,24 @@ body { font-family: 'Open Sans', sans-serif; color: var(--dark); line-height: 1.
     border-radius: 8px;
 }
 .text { flex: 1; }
-.text p {
-    margin-bottom: 14px;
-    color: #555;
-    font-size: 1rem;
-    text-align: left;
-    line-height: 1.8;
-}
-.text p:last-child { margin-bottom: 0; }
+.text p { margin-bottom: 15px; color: #555; font-size: 1.05em; line-height: 1.8; }
 
-/* CARDS */
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
+/* FULL WIDTH TEXT */
+.text-full {
+    max-width: 900px;
     margin: 0 auto;
 }
-.card {
-    background: var(--white);
-    padding: 30px 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    transition: transform 0.3s, box-shadow 0.3s;
+.text-full p {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.05em;
+    line-height: 1.8;
     text-align: center;
 }
-.card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
-.card h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.1em; }
-.card p { color: #666; font-size: 0.95em; margin: 0; }
+.text-full ul {
+    max-width: 600px;
+    margin: 20px auto;
+}
 
 /* QUOTE */
 .quote {
@@ -170,20 +164,10 @@ footer {
     .navbar { flex-direction: column; gap: 12px; padding: 15px; }
     .navbar ul { flex-wrap: wrap; justify-content: center; gap: 12px; }
     .img-section { flex-direction: column; gap: 25px; }
-    .img-section img {
-        width: 100%;
-        flex: none;
-        height: auto;
-        max-width: 100%;
-    }
-    .img-section img[alt="Logo Instituto Luz Guia"] {
-        width: 200px;
-        flex: none;
-    }
-    .text p { text-align: center; }
-    .hero-logo { width: 280px; }
-    .section h2 { font-size: 1.5em; }
+    .img-section img { width: 100%; flex: none; height: auto; max-width: 100%; }
+    .img-section img[alt="Logo Instituto Luz Guia"] { width: 200px; flex: none; }
+    .hero h1 { font-size: 1.8em; }
+    .section h2 { font-size: 1.6em; }
     .section { padding: 50px 20px; }
     .quote { margin: 0 20px; }
-    .cards { grid-template-columns: 1fr; }
 }
