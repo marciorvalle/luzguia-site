@@ -43,12 +43,12 @@ body { font-family: 'Open Sans', sans-serif; color: var(--dark); line-height: 1.
     background: linear-gradient(135deg, #e8f5e9, #b2dfdb);
     color: var(--primary-dark);
     text-align: center;
-    padding: 80px 20px 100px;
+    padding: 60px 20px 80px;
 }
 .hero-logo {
-    width: 280px;
+    width: 350px;
     max-width: 80%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     filter: drop-shadow(0 4px 15px rgba(0,0,0,0.1));
 }
 .hero h1 {
