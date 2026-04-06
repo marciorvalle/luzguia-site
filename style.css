@@ -117,7 +117,13 @@ ul li:last-child { margin-bottom: 0; }
     border-radius: 8px;
 }
 .text { flex: 1; }
-.text p { margin-bottom: 15px; color: #555; font-size: 1.05em; line-height: 1.8; }
+.text p {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.05em;
+    line-height: 1.8;
+    text-align: justify;
+}
 
 /* FULL WIDTH TEXT */
 .text-full {
@@ -129,11 +135,40 @@ ul li:last-child { margin-bottom: 0; }
     color: #555;
     font-size: 1.05em;
     line-height: 1.8;
-    text-align: center;
+    text-align: justify;
+}
+.text-full h3 {
+    color: var(--primary);
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 1.2em;
 }
 .text-full ul {
-    max-width: 600px;
+    max-width: 700px;
     margin: 20px auto;
+}
+
+/* DESTAQUES (Quem Somos) */
+.destaques {
+    list-style: none;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0;
+}
+.destaques li {
+    padding: 15px 20px 15px 50px;
+    position: relative;
+    margin-bottom: 15px;
+    background: var(--light);
+    border-radius: 8px;
+    text-align: justify;
+    line-height: 1.7;
+}
+.destaques li::before {
+    content: "✅";
+    position: absolute;
+    left: 15px;
+    top: 15px;
 }
 
 /* QUOTE */
@@ -158,6 +193,20 @@ footer {
     padding: 25px;
     font-size: 0.85em;
 }
+
+/* CONTATO PAGE */
+.contato-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+.contato-info h2 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+.contato-info h2:first-child { margin-top: 0; }
+.contato-info p { color: #555; margin-bottom: 10px; font-size: 1.05em; }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
