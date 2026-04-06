@@ -99,16 +99,14 @@ ul li:last-child { margin-bottom: 0; }
 /* IMAGE + TEXT */
 .img-section {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 50px;
     max-width: 1100px;
     margin: 0 auto;
 }
 .img-section img {
-    flex: 0 0 420px;
-    width: 420px;
-    height: 280px;
-    object-fit: cover;
+    flex: 0 0 350px;
+    width: 350px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
